@@ -1,0 +1,67 @@
+## Basic Configuration
+baseurl = "https://sigute.github.io/"
+languageCode = "en"
+title = "Blog"
+defaultContentLanguage = "en"
+theme = "hyde-hyde"
+
+## Hugo Built-in Features
+# disqusShortname = "your-disqus-shortname"
+# googleAnalytics = "your-google-analytics-id"
+# enableRobotsTXT = true
+
+# summarylength = 30
+
+#paginate = 5
+
+## Site Settings
+[params]
+    author = "Sigute Kateivaite"
+    title = "Blog"
+    # description = "..."
+    authorimage = "/images/profile.jpeg"
+    dateformat = "2006 Jan 2"
+
+    # sidebar, copyright & license
+    copyright = "Sigute Kateivaite"
+    since = 2020
+    showBuiltWith = true
+
+    # https://highlightjs.org
+    highlightjs = true
+    highlightjsstyle = "github"
+    
+    # please choose either GraphComment or Disqus or Utterances
+    #GraphCommentId = "..."
+    #UtterancesRepo = "..." # https://utteranc.es/
+    #UtterancesIssueTerm = "..." # pathname, url, title, og:title
+    #UtterancesTheme = "..." # github-light or github-dark
+
+    # Table of contents
+    #toc = none, "hugo", or "tocbot"
+    
+    postNavigation = true
+
+## Social Accounts
+[params.social]
+    github = "sigute"
+    linkedin = "sigute"
+    medium = "sigute"
+    twitter = "Sigute_K"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+# [[menu.main]]
+#     name = "Portfolio"
+#     identifier = "portfolio"
+#     weight = 200
+#     url = "/portfolio/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 300
+    url = "/about/"
