@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.69.2" />
+
+    
+    
+    
+
+<title>Android Accessibility - Where to start? • Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android Accessibility - Where to start?"/>
+<meta name="twitter:description" content="
+Making sure as many people as possible can use an app you are developing is so important for many of us. If you are just starting to think about accessibility in your Android app, it can be hard to understand what the requirements are and how to get started. This article will allow you to start exploring common accessibility issues in Android apps; making these small improvements will help many users of your app."/>
+
+<meta property="og:title" content="Android Accessibility - Where to start?" />
+<meta property="og:description" content="
+Making sure as many people as possible can use an app you are developing is so important for many of us. If you are just starting to think about accessibility in your Android app, it can be hard to understand what the requirements are and how to get started. This article will allow you to start exploring common accessibility issues in Android apps; making these small improvements will help many users of your app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sigute.github.io/posts/android-accessibility-where-to-start/" />
+<meta property="article:published_time" content="2020-02-11T00:00:00+01:00" />
+<meta property="article:modified_time" content="2020-02-11T00:00:00+01:00" /><meta property="og:site_name" content="Blog" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://sigute.github.io/">Blog</a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://sigute.github.io/images/profile.jpeg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/Sigute_K" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/sigute" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/sigute" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://medium.com/@sigute" rel="me"><i class="fab fa-medium fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2020 Sigute Kateivaite
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Android Accessibility - Where to start?</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> 2020 Feb 11
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 5 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p><img src="/images/blogs/accessibility/header_where_to_start.jpeg" alt="Question mark"></p>
+<p>Making sure as many people as possible can use an app you are developing is so important for many of us. If you are just starting to think about accessibility in your Android app, it can be hard to understand what the requirements are and how to get started. This article will allow you to start exploring common accessibility issues in Android apps; making these small improvements will help many users of your app.</p>
+<h2 id="tools">Tools</h2>
+<p>The main tools used for Android accessibility testing are offered by Google and many come pre-installed on every device. The main ones you need to start with are:</p>
+<h3 id="talkback">Talkback</h3>
+<p>Most devices have either <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en">Talkback</a> or a similar screen reader already pre-installed. Once enabled, a tutorial is provided so you can learn how to navigate. With Talkback, captions can be enabled in the settings and are helpful to verify the announcements, and if you need to take a screenshot to share with other members of the team this is a useful feature.</p>
+<p>Enable Talkback and captions:</p>
+<p><code>Settings -&gt; Accessibility -&gt; Talkback -&gt; Settings -&gt; Developer Settings -&gt; Display speech output</code></p>
+<h3 id="accessibility-scanner">Accessibility Scanner</h3>
+<p><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">Accessibility Scanner</a> is a tool made by Google specifically for finding common accessibility issues and is very easy to use. It can be downloaded and installed from the Play store. Once installed, any screen in any app can be scanned for issues.</p>
+<h3 id="contrast-checker">Contrast checker</h3>
+<p>After finding issues, sometimes tweaking colours is enough to resolve them. There are many contrast checkers available, I like the <a href="https://webaim.org/resources/contrastchecker/">WebAIM</a> one as it checks both text and other elements.</p>
+<h2 id="5-places-tostart">5 places to start</h2>
+<p>My advice is to start with these areas to address the most common issues found in many apps. When we think about accessibility in apps, we often think about vision impairments, including vision loss. Another area to think about is mobility impairments which can make it difficult to use controls and navigation.</p>
+<h3 id="labels-and-content-descriptions">Labels and content descriptions</h3>
+<p>Launch Talkback and start checking what announcements are made as you focus on various views in the app. Some questions to keep in mind while testing:</p>
+<ul>
+<li>Do buttons have labels?</li>
+<li>Do images have content descriptions?</li>
+<li>Do labels match what is actually shown on the screen?</li>
+<li>When the element state changes, is the content description updated? (for example, ticked and unticked radio button)</li>
+<li>Are there some elements which are only decorative and should not be announced?</li>
+</ul>
+<p>Fixing issues in this category is usually straightforward. Content description can be added and updated. Decorative elements can be labelled as not important for accessibility and will be skipped. Android Lint provides some warnings for missing accessibility features, and addressing these will help.</p>
+<p>The aforementioned Accessibility Scanner will catch a lot of these issues too.</p>
+<h3 id="navigation">Navigation</h3>
+<p>Talkback is the tool to use for this category. Keyboard navigation follows similar paths, so it could be used for testing as well.</p>
+<ul>
+<li>As you navigate through the app, does focus jump around or is the order followed logical?</li>
+<li>Do you lose focus and need to start at the top of the page again?</li>
+<li>Can all areas be accessed without tapping on the screen directly?</li>
+<li>Does Talkback focus on each element separately or can some elements be grouped? (for example, user name could be navigated as &ldquo;Name&rdquo;, &ldquo;Surname&rdquo; or as one &ldquo;Name Surname&rdquo; element)</li>
+</ul>
+<p>Fixing navigation can be challenging, so deciding on the strategy early rather than trying to retrofit the solution later is often the best approach. Some things to look into for this category include the accessibility traversal order, setting content descriptions on groups rather than individual items and requesting focus manually on specific elements in some scenarios.</p>
+<h3 id="font-sizes">Font sizes</h3>
+<p>Changing font to a larger size in device settings will help to check for issues in this area. Display size can be changed as well and should be tested. Things to look for include:</p>
+<ul>
+<li>Does all the text in the app respond to device setting font size?</li>
+<li>Do any elements overlap each other?</li>
+<li>Is any text cut off and cannot be read anymore?</li>
+</ul>
+<p>To fix issues in this area, look for any usages of <code>dp</code> instead of <code>sp</code> for text sizing. Make sure elements scale to match the text sizes and prefer scrollable screens which can accommodate additional height if needed. For the individual views, it is best to avoid fixed height and width. Setting the view height and width to <code>wrap_content</code> and using <code>minWidth</code> and <code>minHeight</code> attributes will help with the scaling.</p>
+<h3 id="contrast">Contrast</h3>
+<p>Contrast can be checked using Accessibility Scanner and other contrast checker tools. It might be hard to determine contrast ratio just by looking. Some questions you might ask are:</p>
+<ul>
+<li>Are any colours very similar to each other?</li>
+<li>Can tappable elements be easily distinguished?</li>
+<li>Is there a rule for what colours of background and text could be used in the app, to make the contrast ratio more predictable?</li>
+</ul>
+<p>General requirement is minimum <code>4.5:1</code> contrast ratio of text to background, and <code>3:1</code> for controls. Outlines can help to distinguish tappable elements in some cases.</p>
+<h3 id="tap-targetsizes">Tap target sizes</h3>
+<p>If you ever tried tapping a button multiple times without success, you have ran into this issue. Accessibility Scanner will highlight the areas which are too small to tap accurately. Some things to keep in mind include:</p>
+<ul>
+<li>Is there enough padding to tappable elements?</li>
+<li>Are there a lot of small elements right next to each other, so it&rsquo;s easy to mis-tap?</li>
+<li>Can the entire element be tapped or is the tap area limited to a small portion of it?</li>
+<li>Can the tap area be expanded?</li>
+</ul>
+<p>Android recommendation is a minimum <code>48x48dp</code> for tappable areas. Some margins between elements, where possible, can also make for a nicer experience.</p>
+<h2 id="watch-outfor">Watch out for…</h2>
+<h3 id="custom-views">Custom views</h3>
+<p>If you define your own custom views, be careful. Default Android framework elements come with a lot of built-in accessibility support. Where possible, extending the framework class, like <code>Button</code>, might help to reduce some work vs extending a more generic class, such as <code>FrameLayout</code>, and having to build various states and announcements from scratch.</p>
+<h2 id="continue-with">Continue with…</h2>
+<p>Checking for these common issues will help to improve accessibility in your app. However, there are more things to consider to provide a great experience for users with accessibility needs. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG guidelines</a> are a great place to go for understanding additional requirements and exploring common solutions.</p>
+<h2 id="notes">Notes</h2>
+<p>Header image: Question mark by <a href="https://www.pexels.com/photo/ask-blackboard-chalk-board-chalkboard-356079/">pixabay.com</a></p>
+<p>This post has been previously published in Android@Microsoft <a href="https://medium.com/android-microsoft/android-accessibility-where-to-start-b7875045d9">Medium</a> publication and <a href="https://dev.to/sigute/android-accessibility-where-to-start-40ce">dev.to</a>.</p>
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/posts/making-android-studio-work-for-me/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Making Android Studio work for me</span>
+    </a>
+    
+    
+    <a href="/posts/improving-pull-request-process-with-complexity-labels/" class="navigation-next">
+      <span class="navigation-tittle">Improving Pull Request Process with Complexity Labels</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

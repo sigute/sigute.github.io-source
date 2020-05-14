@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.69.2" />
+
+    
+    
+    
+
+<title>Things I learned at droidconDE — Part 1 • Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Things I learned at droidconDE — Part 1"/>
+<meta name="twitter:description" content="
+I am back home from an intense three day conference. It was a great experience and I learned a lot about persistence, building at scale and Kotlin. This is my overview of technical things I learnt. Soft skills article and general conference overview is here!"/>
+
+<meta property="og:title" content="Things I learned at droidconDE — Part 1" />
+<meta property="og:description" content="
+I am back home from an intense three day conference. It was a great experience and I learned a lot about persistence, building at scale and Kotlin. This is my overview of technical things I learnt. Soft skills article and general conference overview is here!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sigute.github.io/posts/things-i-learned-at-droidcon-de-part-1/" />
+<meta property="article:published_time" content="2017-09-11T00:00:00+01:00" />
+<meta property="article:modified_time" content="2017-09-11T00:00:00+01:00" /><meta property="og:site_name" content="Blog" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://sigute.github.io/">Blog</a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://sigute.github.io/images/profile.jpeg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/Sigute_K" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/sigute" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/sigute" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://medium.com/@sigute" rel="me"><i class="fab fa-medium fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2020 Sigute Kateivaite
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Things I learned at droidconDE — Part 1</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> 2017 Sep 11
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 4 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p><img src="/images/blogs/droidcon/header.jpeg" alt="Droidcon banner"></p>
+<p>I am back home from an intense three day conference. It was a great experience and I learned a lot about persistence, building at scale and Kotlin. This is my overview of technical things I learnt. Soft skills article and general conference overview is <a href="/posts/things-i-learned-at-droidcon-de-part-2">here</a>!</p>
+<h2 id="sqlite-is-over">SQLite is over?</h2>
+<p>From the first day of Barcamp, there were many talks about persistence. Sqlite has been my go-to solution previously. However, it comes with some problems, especially updates are a bit painful and SQL queries are not easy to debug. I really enjoyed the SQL lovers &amp; haters panel.</p>
+<p>I am going to try something different when I need a persistence solution next time and I will look at <a href="https://developer.android.com/topic/libraries/architecture/room.html">Room</a>, <a href="https://realm.io/">Realm</a> and <a href="http://objectbox.io/">ObjectBox</a>. I am especially interested in trying Realm and ObjectBox, as they move away from SQL. Room looks like an interesting solution from Google, but it still involves writing some SQL queries.</p>
+<h2 id="developing-at-big-scale">Developing at big scale</h2>
+<p>One of my favourite talks was from Facebook — “Scaling Android @ Facebook” by Marco Cova. The scale Facebook operates in is hard to comprehend! These are a few key things which stuck with me.</p>
+<p><strong>Why not just develop on master?</strong> All code is on the same mono repo. With many developers working on the same code base, merges become very painful — if you work on your branch for a week, chances are good that code has changed on master in the meanwhile and you are going to struggle merging it back in. With very advanced feature switching, it makes more sense to put the new code behind a feature switch and develop directly on master. No one is going to see the changes until the feature is ready anyway! This is not something I am going to apply here at Base. With smaller team, merge conflicts are rarely painful. However, at Facebook scale this makes perfect sense! It also means that code reviews are smaller and faster.</p>
+<p>Facebook releases <strong>new features every week</strong>. How do they achieve this? Master is branched for release every week. This starts a week of stability while the app is in the hands of beta users. A new beta update is released every day with any bug fixes. Oh, also, that’s <strong>2.5 million</strong> of beta users!</p>
+<p>There is also alpha group with <strong>100K</strong> users. Alpha users get updates every week directly from master branch, meaning any bugs/regressions can be spotted very quickly before the app goes out to beta.</p>
+<p>And one more thing from Facebook… localisation.</p>
+<p><img src="/images/blogs/droidcon/localisation.jpeg" alt="Slide showing localisation in Facebook with 70 languages and 40 MB worth of content"></p>
+<p>Localisation quickly turns into a problem when your translation files add up to <strong>40Mb</strong>! (6000+ strings in 70+ languages). Solution: start with English as default and download only required language resources when the app starts. This also requires extension of Android Resources files.</p>
+<p>Another talk I really enjoyed was from Realm — “Tales from the dark side: developing SDKs at scale” by Kenneth Geisshirt. Similarly, the talk was also about what happens with scale. There are some weird problems you run into when your userbase grows and the bugs from all the weird and wonderful devices start coming in.</p>
+<p>Some of the problems are caused by the bugs which have been long resolved by manufacturers or Android. However, of course, there are no updates on these devices, so you have to either live with your SDK/app being broken on these devices or try to find workarounds. Sometimes this involves looking at and modifying some very low level code.</p>
+<p><img src="/images/blogs/droidcon/low_level_code.jpeg" alt="Slide showing some memmove code, from article below"></p>
+<p>Full story <a href="https://academy.realm.io/posts/when-memmove-fails/">here</a>, recommended reading! :)</p>
+<h2 id="kotlin-everywhere">Kotlin everywhere!</h2>
+<p>Majority of code examples used in talks were in Kotlin and it seems like it’s definitely becoming very very popular in Android community. I have not made the change just yet. However, with official support from google, the reasons not to switch are disappearing quickly. After the conference, I feel much more strongly about starting to use Kotlin at work.
+There was a good point made during Barcamp that newcomers to Android are likely to start with Kotlin. After a few years, will we be struggling to find new developers who actually want to work on a project with java code base?
+And with this, that’s main technical things I learned this year. Thanks for the great experience, maybe I will be back next year as well! :)</p>
+<h2 id="notes">Notes</h2>
+<p>This post has been previously published in <a href="https://medium.com/@sigute/things-i-learned-at-droidconde-part-1-f8df64aa0866">Medium</a>.</p>
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    
+    <a href="/posts/things-i-learned-at-droidcon-de-part-2/" class="navigation-next">
+      <span class="navigation-tittle">Things I learned at droidconDE — Part 2</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

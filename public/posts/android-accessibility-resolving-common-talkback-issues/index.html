@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.69.2" />
+
+    
+    
+    
+
+<title>Android Accessibility - Resolving common Talkback issues • Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android Accessibility - Resolving common Talkback issues"/>
+<meta name="twitter:description" content="
+Many Android applications suffer from similar Talkback issues and at Microsoft To Do we run into these often as well. We use multiple strategies to make our app more accessible. This article covers a few scenarios where Talkback experience is improved."/>
+
+<meta property="og:title" content="Android Accessibility - Resolving common Talkback issues" />
+<meta property="og:description" content="
+Many Android applications suffer from similar Talkback issues and at Microsoft To Do we run into these often as well. We use multiple strategies to make our app more accessible. This article covers a few scenarios where Talkback experience is improved." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sigute.github.io/posts/android-accessibility-resolving-common-talkback-issues/" />
+<meta property="article:published_time" content="2020-03-18T00:00:00+01:00" />
+<meta property="article:modified_time" content="2020-03-18T00:00:00+01:00" /><meta property="og:site_name" content="Blog" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://sigute.github.io/">Blog</a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://sigute.github.io/images/profile.jpeg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/Sigute_K" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/sigute" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/sigute" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://medium.com/@sigute" rel="me"><i class="fab fa-medium fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2020 Sigute Kateivaite
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Android Accessibility - Resolving common Talkback issues</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> 2020 Mar 18
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 6 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p><img src="/images/blogs/accessibility/header2.jpeg" alt="A path through the forest"></p>
+<p>Many Android applications suffer from similar Talkback issues and at Microsoft To Do we run into these often as well. We use multiple strategies to make our app more accessible. This article covers a few scenarios where Talkback experience is improved.</p>
+<p>A companion Github repository containing the sample code is available <a href="https://github.com/sigute/AccessibilityTipsDemo">here</a>. You can check it out and try running the demo app on your device to experience the issues and try the solutions yourself.</p>
+<h2 id="combining-views-intogroups">Combining views into groups</h2>
+<p>Not everything visible on the screen is meaningful; some views are used only for decoration, some images illustrate the text without adding additional information, and sometimes multiple views convey the meaning together but do not make sense separately. In these cases, the views can be combined to allow Talkback user to quickly navigate entire view, rather than having to skip through multiple different elements.</p>
+<h3 id="example">Example</h3>
+<p><img src="/images/blogs/accessibility/grouping_bad.png" alt="Screenshot showing Talkback navigation over ungrouped elements"></p>
+<p><em>Screenshot showing Talkback navigation over ungrouped elements</em></p>
+<p>Talkback reads the user element on the page as &ldquo;User placeholder avatar&rdquo;, &ldquo;Name&rdquo;, and then &ldquo;Surname&rdquo;. Each element can be navigated individually. The user icon is a placeholder which does not provide additional information. It takes three swipes to navigate through the element.</p>
+<h3 id="solution">Solution</h3>
+<p><img src="/images/blogs/accessibility/grouping_good.png" alt="Screenshot showing Talkback navigation over group"></p>
+<p><em>Screenshot showing Talkback navigation over group</em></p>
+<p>Content description is set on the entire group so Talkback reads only one label, containing all user information as &ldquo;Name Surname&rdquo;. Now navigation is done in only one swipe.</p>
+<h3 id="xml-layoutsnippet">XML layout snippet</h3>
+<p>Content description is set on LinearLayout, child views are marked as not important for accessibility individually.</p>
+<script type="application/javascript" src="https://gist.github.com/sigute/c3ca091b52f1bdee26dd8f87c0f1da98.js"></script>
+
+<h2 id="action-descriptions">Action descriptions</h2>
+<p>As Talkback navigates the elements with click actions, the announcement generated will include some information, for example &ldquo;Login, Button, Double tap to activate&rdquo;. However, relying on default announcements is not always enough.</p>
+<h3 id="example-1">Example</h3>
+<p><img src="/images/blogs/accessibility/actions_bad.png" alt="Screenshot showing Talkback announcements for the Button without custom actions"></p>
+<p><em>Screenshot showing Talkback announcements for the Button without custom actions</em></p>
+<p>A button with two actions generates an accessibility announcement of &ldquo;Edit note, Double tap to activate, Double tap and hold to long press&rdquo;.</p>
+<h3 id="solution-1">Solution</h3>
+<p><img src="/images/blogs/accessibility/actions_good.png" alt="Screenshot showing Talkback announcements for the Button with custom actions"></p>
+<p><em>Screenshot showing Talkback announcements for the Button with custom actions</em></p>
+<p>Actions are modified to announce &ldquo;Double tap to edit note, Double tap and hold to copy note&rdquo;.</p>
+<h3 id="code-snippet">Code snippet</h3>
+<p>Custom actions are added in accessibility delegate, ensuring that it&rsquo;s clear what happens when each action is carried out.</p>
+<script type="application/javascript" src="https://gist.github.com/sigute/6fb39654bb5a83aab1d21f7ad289a15f.js"></script>
+
+<h2 id="roles">Roles</h2>
+<p>Talkback reads the element roles, such as Button, Switch, Checkbox, etc. This gets complicated when non-standard elements are used. For example, adding a click listener will add an action to Talkback announcement, but the role will generally not change, potentially causing confusion.</p>
+<h3 id="example-2">Example</h3>
+<p><img src="/images/blogs/accessibility/roles.png" alt="Screenshot showing examples of different types of buttons and Talkback announcements"></p>
+<p><em>Screenshot showing examples of different types of buttons and Talkback announcements</em></p>
+<p>The button is announced as &ldquo;Login, Button&rdquo;. Adding on a click listener to TextView does not include the &ldquo;Button&rdquo; announcement. In the last example, TextView is announced as &ldquo;Button&rdquo;.</p>
+<h3 id="code-snippet-1">Code snippet</h3>
+<p>Role is added by including it in the accessibility delegate. This is not an ideal solution; best practice is to use elements as intended, so using Button when Button behaviour is needed, which avoids the need to modify roles manually, as it is easy to miss some behaviour which comes by default. However, in some cases, this will help.</p>
+<script type="application/javascript" src="https://gist.github.com/sigute/13f5002d7e065890550b5c2aa8041004.js"></script>
+
+<h2 id="updating-information-after-statechanges">Updating information after state changes</h2>
+<p>Lint warning often reminds us about adding initial content descriptions, but for the elements with states, this might not be enough. It is important to remember to update accessibility information as well.</p>
+<h3 id="example-3">Example</h3>
+<p><img src="/images/blogs/accessibility/states_bad.png" alt="Screenshots showing Talkback announcements for Buttons where UI changes but accessibility information is not updated"></p>
+<p><em>Screenshots showing Talkback announcements for Buttons where UI changes but accessibility information is not updated</em></p>
+<p>The favorite button is not updated after the user taps on it, so the Talkback announcement still reads &ldquo;Not favorite item, Button, Double tap to activate&rdquo; after the user already added the item to favorites and the UI is updated to reflect this.</p>
+<h3 id="solution-2">Solution</h3>
+<p><img src="/images/blogs/accessibility/states_good.png" alt="Screenshots showing Talkback announcements with changed UI and accessibility information"></p>
+<p><em>Screenshots showing Talkback announcements with changed UI and accessibility information</em></p>
+<p>Favorite button content and action descriptions are updated so Talkback reads one of two states: &ldquo;Not favorite item, Button, Double tap to add to favorites&rdquo; and &ldquo;Favorite item, Button, Double-tap to remove from favorites&rdquo;.</p>
+<h3 id="code-snippet-2">Code snippet</h3>
+<p>When a tap event is received and the element state changes, the content and action descriptions are updated to reflect the current state of the item. This is especially important for elements which represent On/Off state, like the favorite button. Alternatively, an element which already supports On/Off states could be used in this scenario, like Switch or Checkbox. On the other hand, if more than two states are available, then custom elements make sense.</p>
+<script type="application/javascript" src="https://gist.github.com/sigute/320c4dcaaaf69a3ce19014f98e088926.js"></script>
+
+<h2 id="recyclerview-scrolling">RecyclerView scrolling</h2>
+<p>If RecyclerView does not automatically scroll with Talkback navigation, it will make it very hard for Talkback users to know that there are more elements available. There is one common issue which usually causes this.</p>
+<h3 id="example-4">Example</h3>
+<p><img src="/images/blogs/accessibility/scrolling.gif" alt="GIF showing side by side comparison of Talkback navigation of scrolling and non-scrolling RecyclerView"></p>
+<p><em>GIF showing side by side comparison of Talkback navigation of scrolling and non-scrolling RecyclerView</em></p>
+<p>The first RecyclerView allows user to see the first 5 elements and then navigation skips the rest. The second RecyclerView moves to the 6th element in the list and scrolls down to make additional elements available. The focus only moves away from RecyclerView when all elements are visited.</p>
+<h3 id="layout-snippet">Layout snippet</h3>
+<p>If the following line is in the RecyclerView layout, removing it will fix the issue. It will also add additional in/out of list announcements to help the users navigate.</p>
+<script type="application/javascript" src="https://gist.github.com/sigute/c9b3c1833ce978f6b3fcaf26f28b1c78.js"></script>
+
+<h2 id="recyclerview-focus">RecyclerView focus</h2>
+<p>As is the nature of RecyclerView, it can recycle the view holders if there are changes to the data. However, this can create focus issues if some view is no longer displayed or the view holder is reused in a different position. Understanding what is happening will help with keeping the focus unchanged.</p>
+<h3 id="example-5">Example</h3>
+<p><img src="/images/blogs/accessibility/focus.gif" alt="GIF showing side by side Talkback navigation of RecyclerView with focus issues and a fix"></p>
+<p><em>GIF showing side by side Talkback navigation of RecyclerView with focus issues and a fix</em></p>
+<p>RecyclerViews allow the user to mark elements as deleted. In the first RecyclerView, once the delete icon is tapped and the element text is replaced with &ldquo;Deleted name&rdquo;, the focus returns to the top of the activity, so the user needs to navigate through the entire screen again to return to the original focus position. The second RecyclerView keeps the focus on the same element, shifting it from the icon to the name.</p>
+<h3 id="code-snippet-3">Code snippet</h3>
+<p>After the element is marked as deleted there is a short delay to allow RecyclerView time to reuse ViewHolders, then the desired position is found and focus is returned to that position. If the underlying data set is not changed and there is no refresh of the data in RecyclerView adapter, this could potentially be solved within ViewHolder itself. As always, the best solution is the one which addresses the specific need.</p>
+<script type="application/javascript" src="https://gist.github.com/sigute/7bb06f33d827a5cb4e3fd1c4a5595722.js"></script>
+
+<h2 id="conclusions">Conclusions</h2>
+<p>Accessibility is important for our team at Microsoft To Do. We spend a lot of time making sure every user can stay organised and accomplish more, independent of how they use their device. Most of our Android app releases include several accessibility improvements. We also work with our design team to consider accessibility requirements from the start.</p>
+<p>Accessibility issues we encounter range from simple to tricky - it takes time and dedication to find and resolve them all. I hope this article helps you to solve some. Code snippets in the article have been simplified for clarity, so check the sample code for full implementations.</p>
+<p>Is there a different way you would approach some of these? Let&rsquo;s discuss it!</p>
+<h2 id="notes">Notes</h2>
+<p>Header photo by <a href="https://www.pexels.com/photo/landscape-photo-of-pathway-between-green-leaf-trees-615348/">Skitterphoto</a>.</p>
+<p>This article was first published on Android@Microsoft Medium publication <a href="https://medium.com/android-microsoft/android-accessibility-resolving-common-talkback-issues-3c45076bcdf6">here</a>.</p>
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/posts/improving-pull-request-process-with-complexity-labels/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Improving Pull Request Process with Complexity Labels</span>
+    </a>
+    
+    
+    <a href="/posts/accessible-reordering-for-touch-devices/" class="navigation-next">
+      <span class="navigation-tittle">Accessible Reordering For Touch Devices</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

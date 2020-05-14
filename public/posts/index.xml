@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Blog</title>
+    <link>https://sigute.github.io/posts/</link>
+    <description>Recent content in Posts on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://sigute.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Accessible Reordering For Touch Devices</title>
+      <link>https://sigute.github.io/posts/accessible-reordering-for-touch-devices/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/accessible-reordering-for-touch-devices/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/accessibility/reorder_header.jpeg&#34; alt=&#34;Person using Microsoft To Do app with list open in reorder mode&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In Microsoft To Do we put a lot of work into making our features available for everyone using our apps. We discovered that the way our task reordering was implemented was not accessible and this is how we approached this problem.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Accessibility - Resolving common Talkback issues</title>
+      <link>https://sigute.github.io/posts/android-accessibility-resolving-common-talkback-issues/</link>
+      <pubDate>Wed, 18 Mar 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/android-accessibility-resolving-common-talkback-issues/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/accessibility/header2.jpeg&#34; alt=&#34;A path through the forest&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Many Android applications suffer from similar Talkback issues and at Microsoft To Do we run into these often as well. We use multiple strategies to make our app more accessible. This article covers a few scenarios where Talkback experience is improved.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Improving Pull Request Process with Complexity Labels</title>
+      <link>https://sigute.github.io/posts/improving-pull-request-process-with-complexity-labels/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/improving-pull-request-process-with-complexity-labels/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/pull_request_labels/header.jpeg&#34; alt=&#34;Sticky notes and pens&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Does your team struggle with pull requests? Is there never enough time in the day to review others code? Do you feel like you need to keep asking your teammates for code reviews? Is the list growing everyday with no end in sight? Pull requests &lt;strong&gt;are&lt;/strong&gt; hard. Our Android team at Microsoft To Do made some changes recently to improve the process. I have suggested adding labels to pull requests and this article shows my solution.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Accessibility - Where to start?</title>
+      <link>https://sigute.github.io/posts/android-accessibility-where-to-start/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/android-accessibility-where-to-start/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/accessibility/header_where_to_start.jpeg&#34; alt=&#34;Question mark&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Making sure as many people as possible can use an app you are developing is so important for many of us. If you are just starting to think about accessibility in your Android app, it can be hard to understand what the requirements are and how to get started. This article will allow you to start exploring common accessibility issues in Android apps; making these small improvements will help many users of your app.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Making Android Studio work for me</title>
+      <link>https://sigute.github.io/posts/making-android-studio-work-for-me/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/making-android-studio-work-for-me/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/android_studio/header.jpeg&#34; alt=&#34;Coloring materials, including paintbrushes, pencils and paint&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When I install Android Studio, I like to make some adjustments which help me be more productive. These are my tips for customising Android Studio.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tips from attending my first Grace Hopper Celebration</title>
+      <link>https://sigute.github.io/posts/tips-from-attending-my-first-grace-hopper-celebration/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/tips-from-attending-my-first-grace-hopper-celebration/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/ghc2019/header.jpeg&#34; alt=&#34;Conference center with GHC sign on the front lawn&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I have attended my first Grace Hopper Celebration (GHC) in 2019. I was really excited to go. It is the biggest conference for women in tech fields, named after &lt;a href=&#34;https://en.wikipedia.org/wiki/Grace_Hopper&#34;&gt;Grace Hopper&lt;/a&gt;: computer scientist, admiral, inventor of the first compiler and a lot of other contributions to the fields of computing. GHC has been running since 1994, starting out with 500 attendees. In 2019, this number grew to 26000.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Why I love working with Kotlin</title>
+      <link>https://sigute.github.io/posts/why-i-love-working-with-kotlin/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/why-i-love-working-with-kotlin/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/kotlin_love/header.jpeg&#34; alt=&#34;Hand-drawn heart&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I have been using Kotlin for about a year now, and also started using &lt;a href=&#34;https://kotlinlang.org/docs/tutorials/android-plugin.html&#34;&gt;Kotlin Android Extensions&lt;/a&gt; recently. These are a few of my favourite Kotlin things!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Things I learned at droidcon Berlin 2018</title>
+      <link>https://sigute.github.io/posts/things-i-learned-at-droidcon-berlin-2018/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/things-i-learned-at-droidcon-berlin-2018/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/droidcon/header3.jpeg&#34; alt=&#34;Picture of Android robot with birthday hat on&#34;&gt;
+&lt;em&gt;Happy 10th birthday, droidcon Berlin!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This year was droidcon Berlin’s 10th birthday and I enjoyed three days packed with all things Android. In this post, I am sharing my experience and the things which stood out to me the most.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Let go of your unused code</title>
+      <link>https://sigute.github.io/posts/let-go-of-your-unused-code/</link>
+      <pubDate>Fri, 23 Mar 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/let-go-of-your-unused-code/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/unused_code/header.jpeg&#34; alt=&#34;Phone, pen and a notebook titled &amp;ldquo;Creative Mess&amp;rdquo;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;There are many parallels to be drawn between the software development and minimalism. I have noticed that the reasons unused code keeps hanging around the software projects are the same emotional reasons which cause clutter to collect at our homes. These are the reasons I have encountered most.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Oreo widget pinning</title>
+      <link>https://sigute.github.io/posts/android-oreo-widget-pinning/</link>
+      <pubDate>Fri, 17 Nov 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/android-oreo-widget-pinning/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/widgets/header.png&#34; alt=&#34;Screenshot from the phone showing examples of various widgets&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Widgets — love them or hate them? Either way, Android Oreo APIs make widgets more discoverable and easier to add by pinning a widget to home screen straight from the app. I ran into a few issues with the widget pinning implementation, this article is me sharing what I found out and how I got there at the end.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Things I learned at droidconDE — Part 2</title>
+      <link>https://sigute.github.io/posts/things-i-learned-at-droidcon-de-part-2/</link>
+      <pubDate>Mon, 11 Sep 2017 00:01:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/things-i-learned-at-droidcon-de-part-2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/droidcon/header2.jpeg&#34; alt=&#34;Picture shows the stage named for Hedy Lamarr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is general overview of my experience at Droidcon, including soft skills I learned! Part 1 with more technical things I learned can be found &lt;a href=&#34;https://sigute.github.io/posts/things-i-learned-at-droidcon-de-part-1&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Things I learned at droidconDE — Part 1</title>
+      <link>https://sigute.github.io/posts/things-i-learned-at-droidcon-de-part-1/</link>
+      <pubDate>Mon, 11 Sep 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://sigute.github.io/posts/things-i-learned-at-droidcon-de-part-1/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sigute.github.io/images/blogs/droidcon/header.jpeg&#34; alt=&#34;Droidcon banner&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I am back home from an intense three day conference. It was a great experience and I learned a lot about persistence, building at scale and Kotlin. This is my overview of technical things I learnt. Soft skills article and general conference overview is &lt;a href=&#34;https://sigute.github.io/posts/things-i-learned-at-droidcon-de-part-2&#34;&gt;here&lt;/a&gt;!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
